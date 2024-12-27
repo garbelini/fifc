@@ -30,13 +30,10 @@ function _fifc
     set -l fzf_cmd "
         _fifc_launched_by_fzf=1 SHELL=fish fzf \
             -d \t \
-            --exact \
             --tiebreak=length \
-            --select-1 \
             --exit-0 \
             --ansi \
             --tabstop=4 \
-            --multi \
             --reverse \
             --header '$header' \
             --preview '_fifc_action preview {} {q}' \
